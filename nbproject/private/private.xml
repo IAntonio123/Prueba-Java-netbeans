@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/C:/Users/Antonio/Documents/NetBeansProjects/java-prueba/src/modelo/Producto.java</file>
             <file>file:/C:/Users/Antonio/Documents/NetBeansProjects/java-prueba/src/DAO/ConectarDB.java</file>
             <file>file:/C:/Users/Antonio/Documents/NetBeansProjects/java-prueba/src/Formato/Mensajes.java</file>
@@ -13,6 +14,11 @@
             <file>file:/C:/Users/Antonio/Documents/NetBeansProjects/java-prueba/src/modelo/Categoria.java</file>
             <file>file:/C:/Users/Antonio/Documents/NetBeansProjects/java-prueba/src/VIsta/FormCliente.java</file>
             <file>file:/C:/Users/Antonio/Documents/NetBeansProjects/java-prueba/src/Formato/CentrarForma.java</file>
+=======
+            <file>file:/C:/Users/bryan/Documents/NetBeansProjects/Prueba-Java-netbeans/src/modelo/Categoria.java</file>
+            <file>file:/C:/Users/bryan/Documents/NetBeansProjects/Prueba-Java-netbeans/src/modelo/Cliente.java</file>
+            <file>file:/C:/Users/bryan/Documents/NetBeansProjects/Prueba-Java-netbeans/src/modelo/Producto.java</file>
+>>>>>>> 80fa9c7ec1fd96be2b1d14d2f274813c55d9ff3b
         </group>
     </open-files>
 </project-private>

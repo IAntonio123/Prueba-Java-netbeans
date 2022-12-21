@@ -1,13 +1,28 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package modelo;
 
-/**
- *
- * @author Antonio
- */
 public class Producto {
+    //Variables
+    private int idProducto;
+    private String NombreProd;
+    private double precioProd;
+    private int stockProd;
+    private int idCategoria;
+    
+    //Constructor
+    public Producto(){}
+    
+    //Getter
+    public int getIdProducto() {return idProducto;}
+    public String getNombre()     {return NombreProd;}
+    public double getPrecio()     {return precioProd;}
+    public int getStock()         {return stockProd;}
+    public int getIdCategoria(){return idCategoria;}
+    
+    //Setter
+    public void setIdProducto(int idProducto)  {this.idProducto = idProducto;}
+    public void setNombre(String NombreProd)      {this.NombreProd = NombreProd;}
+    public void setPrecio(double precioProd)      {this.precioProd = precioProd;}
+    public void setStock(int stockProd)           {this.stockProd = stockProd;}
+    public void setIdCategoria(int idCategoria){this.idCategoria = idCategoria;}
     
 }
