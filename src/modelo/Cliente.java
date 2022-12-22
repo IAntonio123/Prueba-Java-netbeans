@@ -33,4 +33,10 @@ public class Cliente {
     public void setTelefono(String telefono)  {this.telefono = telefono;}
     public void setEmail(String Email)        {this.Email = Email;}
     
+    
+    //Object Data
+    public Object[] Registo(int num){
+        Object[] fila={num,idCliente,nombres,apellidos,direccion,fechaNac,telefono,Email};
+        return fila;
+    }
 }
