@@ -29,7 +29,9 @@ public class ControladorCliente implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-//        Proximamente :v
+        if(e.getSource()==vista.btnRegistrar){
+            
+        }
     }
     
 }
