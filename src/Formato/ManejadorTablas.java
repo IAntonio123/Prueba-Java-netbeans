@@ -33,15 +33,16 @@ public class ManejadorTablas {
    public static void FormatoTablaCliente(JTable tabla){
        
        AnchoColumnas(tabla,0,50);
+       AnchoColumnas(tabla,1,80);
+       AnchoColumnas(tabla,2,200);
+       AnchoColumnas(tabla,3,200);
+       AnchoColumnas(tabla,4,200); 
+       AnchoColumnas(tabla,5,100);
+       AnchoColumnas(tabla,6,100);
+       AnchoColumnas(tabla,7,150);
        JustificarCelda(tabla,0);
-       AnchoColumnas(tabla,1,150);
        JustificarCelda(tabla,1);
-       AnchoColumnas(tabla,2,250);
-       AnchoColumnas(tabla,3,250);
-       AnchoColumnas(tabla,4,300); 
-       AnchoColumnas(tabla,5,150);
        JustificarCelda(tabla,5);
-       AnchoColumnas(tabla,6,250);
    }
    
 }
