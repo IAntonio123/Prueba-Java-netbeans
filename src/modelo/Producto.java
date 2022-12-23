@@ -25,4 +25,9 @@ public class Producto {
     public void setStock(int stockProd)           {this.stockProd = stockProd;}
     public void setIdCategoria(int idCategoria){this.idCategoria = idCategoria;}
     
+    //Object data
+    public Object[] Registo(int num){
+        Object[] fila={num,idProducto,NombreProd,precioProd,stockProd,idCategoria};
+        return fila;
+    }
 }

@@ -27,6 +27,13 @@ public class ControladorMenu implements ActionListener{
             vista.jdpnContenedor.add(Main.fc);
             CentrarForma.CPanel(vista.jdpnContenedor, Main.fc);
         }
+        
+        if(e.getSource()==vista.itemMProducto){
+            Main.fp=new FormProducto();
+            Main.controlfp=new ControladorProducto(Main.fp);
+            vista.jdpnContenedor.add(Main.fp);
+            CentrarForma.CPanel(vista.jdpnContenedor, Main.fp);
+        }
             
     }
 }

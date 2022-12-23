@@ -10,6 +10,9 @@ public class Main {
     public static FormCliente fc;
     public static ControladorCliente controlfc;
     
+    public static FormProducto fp;
+    public static ControladorProducto controlfp;
+    
     public static void main(String[] args) {
         fm=new FormMenu();
         controlfm=new ControladorMenu(fm);

@@ -23,6 +23,7 @@ public class CRUD_Producto extends ConectarDB{
                 pro.setPrecio(rs.getDouble(3));
                 pro.setStock(rs.getInt(4));
                 pro.setIdCategoria(rs.getInt(5));
+                modelo.addRow(pro.Registo(cantreg));
             }
             ManejadorTablas.FormatoTablaCliente(tabla);
             con.close();
