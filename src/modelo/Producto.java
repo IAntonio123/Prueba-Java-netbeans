@@ -4,7 +4,7 @@ public class Producto {
     //Variables
     private int idProducto;
     private String NombreProd;
-    private double precioProd;
+    private Double precioProd;
     private int stockProd;
     private int idCategoria;
     
@@ -14,14 +14,14 @@ public class Producto {
     //Getter
     public int getIdProducto() {return idProducto;}
     public String getNombre()     {return NombreProd;}
-    public double getPrecio()     {return precioProd;}
+    public Double getPrecio()     {return precioProd;}
     public int getStock()         {return stockProd;}
     public int getIdCategoria(){return idCategoria;}
     
     //Setter
     public void setIdProducto(int idProducto)  {this.idProducto = idProducto;}
     public void setNombre(String NombreProd)      {this.NombreProd = NombreProd;}
-    public void setPrecio(double precioProd)      {this.precioProd = precioProd;}
+    public void setPrecio(Double precioProd)      {this.precioProd = precioProd;}
     public void setStock(int stockProd)           {this.stockProd = stockProd;}
     public void setIdCategoria(int idCategoria){this.idCategoria = idCategoria;}
     

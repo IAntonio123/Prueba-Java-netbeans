@@ -1,6 +1,7 @@
 package Procesos;
 
 import VIsta.FormCliente;
+import java.util.Date;
 import modelo.Cliente;
 
 public class ProcesosCliente {
@@ -10,6 +11,14 @@ public class ProcesosCliente {
     fc.setVisible(true);
 }
    
+    public static void LimpiarEntradas(FormCliente fc){
+        fc.txtNombres.setText("");
+        fc.txtApellidos.setText("");
+        fc.txtDireccion.setText("");
+        fc.jdcFechaNacimiento.setDate(new Date());
+        fc.txtTelefono.setText("");
+        fc.txtEmail.setText("");
+    }
     
     public static Cliente LeerDatos(FormCliente fc){
         Cliente cli=new Cliente();

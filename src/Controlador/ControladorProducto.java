@@ -1,34 +1,74 @@
 package Controlador;
 
 import DAO.CRUD_Producto;
+import Formato.Mensajes;
 import VIsta.*;
 import modelo.*;
 import Procesos.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class ControladorProducto implements ActionListener{
-    FormProducto Vista;
+    FormProducto vista;
     Producto model;
     CRUD_Producto crud;
+    
     public ControladorProducto(FormProducto pro){
-        Vista=pro;
-        Vista.jbtnRegistrar.addActionListener(this);
-        Vista.jbtnBuscar.addActionListener(this);
-        Vista.jbtnBuscar.addActionListener(this);
+        vista=pro;
+        vista.jbtnRegistrar.addActionListener(this);
+        vista.jbtnBuscar.addActionListener(this);
+        vista.jbtnActualizar.addActionListener(this);
         ProcesosProducto.Presentacion(pro);
         AcualizarForm();
     }
     void AcualizarForm(){
         crud=new CRUD_Producto();
-        crud.MostrarClientesEnTabla(Vista.jtblDatos);
-    }
+        crud.MostrarProductosEnTabla(vista.jtblDatos);
+        ProcesosProducto.LimpiarEntradas(vista);
+    }   
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==Vista.jbtnRegistrar){
+        if(e.getSource()==vista.jbtnRegistrar){
+            
+            model=ProcesosProducto.LeerDatos(vista);
+            crud=new CRUD_Producto();
+            crud.InsertarProducto(model);
+            AcualizarForm();
+            
+        }
+
+        
+        if(e.getSource()==vista.jbtnBuscar){
+        
+            int codigo=Mensajes.M2("Ingrese el ID del Producto");
+            crud=new CRUD_Producto();
+            model=crud.RecuperarDatosdeServicio(codigo);
+            if(model==null){
+                Mensajes.M1("El ID del Producto: "+codigo+" no existe en el DataBase");
+            }else{
+                vista.jtxtNombreProd.setText(model.getNombre());
+                vista.jtxtPrecio.setText(model.getPrecio()+"");
+                vista.jtxtStock.setText(model.getStock()+"");
+                vista.jtxtIdProducto.setText(model.getIdProducto()+"");
+                vista.jtxtIdCategoria.setText(model.getIdCategoria()+"");
+            }
+            
+        }
+        
+        if(e.getSource()==vista.jbtnActualizar){
+        
+           model=ProcesosProducto.LeerDatos(vista);
+           model.setIdProducto(Integer.parseInt(vista.jtxtIdProducto.getText()));
+           crud=new CRUD_Producto();
+           crud.ActualizarProducto(model);
+           AcualizarForm();
             
         }
     }
+    
     
 }

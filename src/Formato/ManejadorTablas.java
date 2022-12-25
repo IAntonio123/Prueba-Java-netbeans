@@ -37,4 +37,16 @@ public class ManejadorTablas {
        JustificarCelda(tabla,5);
    }
    
+   public static void FormatoTablaProducto(JTable tabla){
+       
+       AnchoColumnas(tabla,0,50);
+       AnchoColumnas(tabla,1,80);
+       AnchoColumnas(tabla,2,200);
+       AnchoColumnas(tabla,3,100);
+       AnchoColumnas(tabla,4,100); 
+       AnchoColumnas(tabla,5,150);
+       JustificarCelda(tabla,0);
+       JustificarCelda(tabla,1);
+   }
+   
 }
