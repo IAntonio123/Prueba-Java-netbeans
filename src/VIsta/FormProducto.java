@@ -28,7 +28,6 @@ public class FormProducto extends javax.swing.JInternalFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jtxtIdCategoria = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jtxtNombreProd = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
@@ -42,6 +41,7 @@ public class FormProducto extends javax.swing.JInternalFrame {
         jbtnActualizar = new javax.swing.JButton();
         jbtnBuscar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
+        jcbxCategoria = new javax.swing.JComboBox<>();
         jLabel9 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jtblDatos = new javax.swing.JTable();
@@ -55,30 +55,29 @@ public class FormProducto extends javax.swing.JInternalFrame {
         jPanel2.setBackground(new java.awt.Color(204, 204, 204));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Registrar Producto", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 0, 12), new java.awt.Color(51, 51, 51))); // NOI18N
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel2.add(jtxtIdCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 60, 140, 30));
 
         jLabel1.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(51, 51, 51));
         jLabel1.setText("ID Categoría:");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 140, 30));
-        jPanel2.add(jtxtNombreProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 240, 40));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 140, 30));
+        jPanel2.add(jtxtNombreProd, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 240, 40));
 
         jLabel2.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(51, 51, 51));
         jLabel2.setText("Nombre");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
-        jPanel2.add(jtxtStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, 240, 40));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
+        jPanel2.add(jtxtStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 240, 40));
 
         jLabel3.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(51, 51, 51));
         jLabel3.setText("Stock");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, -1, -1));
-        jPanel2.add(jtxtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 240, 40));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+        jPanel2.add(jtxtPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, 240, 40));
 
         jLabel4.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(51, 51, 51));
         jLabel4.setText("Precio");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
         jPanel2.add(jtxtIdProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 20, 140, 30));
 
         jLabel5.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
@@ -88,22 +87,26 @@ public class FormProducto extends javax.swing.JInternalFrame {
 
         jbtnRegistrar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         jbtnRegistrar.setText("REGISTRAR");
-        jPanel2.add(jbtnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, 110, 40));
+        jPanel2.add(jbtnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 480, 110, 40));
 
         jbtnActualizar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         jbtnActualizar.setText("ACTUALIZAR");
-        jPanel2.add(jbtnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 490, -1, 40));
+        jPanel2.add(jbtnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 540, -1, 40));
 
         jbtnBuscar.setFont(new java.awt.Font("Microsoft YaHei UI", 0, 14)); // NOI18N
         jbtnBuscar.setText("BUSCAR");
-        jPanel2.add(jbtnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 430, 110, 40));
+        jPanel2.add(jbtnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 480, 110, 40));
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(51, 51, 51));
         jLabel6.setText("DATOS PRODUCTO");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 270, 550));
+        jcbxCategoria.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jPanel2.add(jcbxCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 240, 40));
+        jcbxCategoria.getAccessibleContext().setAccessibleDescription("");
+
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 270, 590));
 
         jLabel9.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         jLabel9.setText("LISTA DE PRODUCTOS");
@@ -122,7 +125,7 @@ public class FormProducto extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(jtblDatos);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 820, 510));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 820, 550));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -142,8 +145,8 @@ public class FormProducto extends javax.swing.JInternalFrame {
     public javax.swing.JButton jbtnActualizar;
     public javax.swing.JButton jbtnBuscar;
     public javax.swing.JButton jbtnRegistrar;
+    public javax.swing.JComboBox<String> jcbxCategoria;
     public javax.swing.JTable jtblDatos;
-    public javax.swing.JTextField jtxtIdCategoria;
     public javax.swing.JTextField jtxtIdProducto;
     public javax.swing.JTextField jtxtNombreProd;
     public javax.swing.JTextField jtxtPrecio;

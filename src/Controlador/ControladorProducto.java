@@ -7,9 +7,6 @@ import modelo.*;
 import Procesos.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.text.ParseException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ControladorProducto implements ActionListener{
     FormProducto vista;
@@ -28,6 +25,7 @@ public class ControladorProducto implements ActionListener{
         crud=new CRUD_Producto();
         crud.MostrarProductosEnTabla(vista.jtblDatos);
         ProcesosProducto.LimpiarEntradas(vista);
+        ProcesosProducto.CompletarCombos(vista);
     }   
 
     @Override
@@ -54,7 +52,7 @@ public class ControladorProducto implements ActionListener{
                 vista.jtxtPrecio.setText(model.getPrecio()+"");
                 vista.jtxtStock.setText(model.getStock()+"");
                 vista.jtxtIdProducto.setText(model.getIdProducto()+"");
-                vista.jtxtIdCategoria.setText(model.getIdCategoria()+"");
+                vista.jcbxCategoria.setSelectedItem(model.getIdCategoria());
             }
             
         }
@@ -69,6 +67,4 @@ public class ControladorProducto implements ActionListener{
             
         }
     }
-    
-    
 }

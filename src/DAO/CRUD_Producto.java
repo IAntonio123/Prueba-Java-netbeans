@@ -85,5 +85,4 @@ public class CRUD_Producto extends ConectarDB{
             Mensajes.M1("Error a la hora de Actualizar Datos del Producto: "+pro.getNombre()+"   \n"+e); 
         }
     }
-    
 }
